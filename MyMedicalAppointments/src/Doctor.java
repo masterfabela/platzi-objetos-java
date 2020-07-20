@@ -7,12 +7,13 @@ public class Doctor {
 
     Doctor(){
         System.out.println("Construyendo el objeto Doctor");
-        id++;
     }
 
-    Doctor(String name){
+    Doctor(String name, String speciality){
+        id++;
         System.out.println("El nombre del Doctor construyendose es "+name);
         this.name = name;
+        this.speciality = speciality;
     }
 
     // Comportamientos
@@ -23,5 +24,5 @@ public class Doctor {
     public void showId(){
         System.out.println("ID Doctor: "+id);
     }
-    
+
 }
