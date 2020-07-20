@@ -3,6 +3,7 @@ import ui.UIMenu;
 public class Doctor {
     static int id = 0; //AutoIncrementable
     String name;
+    String email;
     String speciality;
 
     Doctor(){
