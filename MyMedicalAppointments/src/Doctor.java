@@ -1,3 +1,5 @@
+import ui.UIMenu;
+
 public class Doctor {
     static int id = 0; //AutoIncrementable
     String name;
@@ -21,4 +23,5 @@ public class Doctor {
     public void showId(){
         System.out.println("ID Doctor: "+id);
     }
+    
 }

@@ -1,3 +1,5 @@
+import ui.UIMenu;
+
 import static ui.UIMenu.*;
 
 public class Main {
