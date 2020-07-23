@@ -1,9 +1,11 @@
-import ui.UIMenu;
+package model;
+
+import model.User;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor extends User{
+public class Doctor extends User {
 
     private String speciality;
     private int id_avaliamentAppointment;
@@ -11,7 +13,7 @@ public class Doctor extends User{
     private String time;
 
 
-    Doctor(String name,String email, String speciality){
+    public Doctor(String name,String email, String speciality){
         super(name, email);
         this.speciality = speciality;
     }
@@ -31,7 +33,7 @@ public class Doctor extends User{
     }
 
     public void showId(){
-        System.out.println("ID Doctor: "+super.getId());
+        System.out.println("ID model.Doctor: "+super.getId());
     }
 
     public String getSpeciality() {
@@ -40,6 +42,11 @@ public class Doctor extends User{
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: "+speciality+ "\nAvaliable: "+ availableApointments.toString();
     }
 
     public static class AvailableApointment {
@@ -66,6 +73,11 @@ public class Doctor extends User{
 
         public String getTime() {
             return time;
+        }
+
+        @Override
+        public String toString() {
+            return "Avaliable Appointments \nDate: "+date+ "\nTime: "+time;
         }
     }
 
